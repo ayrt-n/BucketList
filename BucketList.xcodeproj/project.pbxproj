@@ -11,6 +11,8 @@
 		E8BA6E1C2C566C15003CE61F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BA6E1B2C566C15003CE61F /* ContentView.swift */; };
 		E8BA6E1E2C566C16003CE61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8BA6E1D2C566C16003CE61F /* Assets.xcassets */; };
 		E8BA6E212C566C16003CE61F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8BA6E202C566C16003CE61F /* Preview Assets.xcassets */; };
+		E8BA6E282C567CEB003CE61F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BA6E272C567CEB003CE61F /* Location.swift */; };
+		E8BA6E2A2C57ABF5003CE61F /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BA6E292C57ABF5003CE61F /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		E8BA6E1B2C566C15003CE61F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E8BA6E1D2C566C16003CE61F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8BA6E202C566C16003CE61F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E8BA6E272C567CEB003CE61F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		E8BA6E292C57ABF5003CE61F /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				E8BA6E192C566C15003CE61F /* BucketListApp.swift */,
 				E8BA6E1B2C566C15003CE61F /* ContentView.swift */,
+				E8BA6E292C57ABF5003CE61F /* EditView.swift */,
+				E8BA6E272C567CEB003CE61F /* Location.swift */,
 				E8BA6E1D2C566C16003CE61F /* Assets.xcassets */,
 				E8BA6E1F2C566C16003CE61F /* Preview Content */,
 			);
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8BA6E1C2C566C15003CE61F /* ContentView.swift in Sources */,
+				E8BA6E282C567CEB003CE61F /* Location.swift in Sources */,
+				E8BA6E2A2C57ABF5003CE61F /* EditView.swift in Sources */,
 				E8BA6E1A2C566C15003CE61F /* BucketListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +282,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BucketList/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Need to unlock data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +311,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BucketList/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Need to unlock data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

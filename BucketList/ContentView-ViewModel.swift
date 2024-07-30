@@ -9,6 +9,7 @@ import Foundation
 import MapKit
 import CoreLocation
 import LocalAuthentication
+import SwiftUI
 
 extension ContentView {
     @Observable
@@ -18,6 +19,8 @@ extension ContentView {
         private(set) var locations: [Location]
         var selectedPlace: Location?
         var isUnlocked = false
+        var mapStyle = MapStyle.standard
+        var showingMapStyle = false
         
         func addLocation(at point: CLLocationCoordinate2D) {
             let newLocation = Location(id: UUID(), name: "New location", description: "", latitude: point.latitude, longitude: point.longitude)

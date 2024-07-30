@@ -11,8 +11,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var viewModel = ViewModel()
-    @State private var mapStyle = MapStyle.standard
-    @State private var showingMapStyle = false
     
     let startPosition = MapCameraPosition.region(
         MKCoordinateRegion(
@@ -40,7 +38,7 @@ struct ContentView: View {
                             }
                         }
                     }
-                    .mapStyle(mapStyle)
+                    .mapStyle(viewModel.mapStyle)
                     .onTapGesture { position in
                         if let coordinate = proxy.convert(position, from: .local) {
                             viewModel.addLocation(at: coordinate)
@@ -51,14 +49,14 @@ struct ContentView: View {
                             viewModel.update(location: $0)
                         }
                     }
-                    .confirmationDialog("Select map style", isPresented: $showingMapStyle) {
-                        Button("Standard") { mapStyle = .standard }
-                        Button("Imagery") { mapStyle = .imagery }
-                        Button("Hybrid") { mapStyle = .hybrid }
+                    .confirmationDialog("Select map style", isPresented: $viewModel.showingMapStyle) {
+                        Button("Standard") { viewModel.mapStyle = .standard }
+                        Button("Imagery") { viewModel.mapStyle = .imagery }
+                        Button("Hybrid") { viewModel.mapStyle = .hybrid }
                     }
                 }
                 Button {
-                    showingMapStyle = true
+                    viewModel.showingMapStyle = true
                 } label: {
                     Image(systemName: "map.fill")
                         .padding()

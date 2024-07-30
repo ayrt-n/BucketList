@@ -71,6 +71,9 @@ struct ContentView: View {
                 .background(.blue)
                 .foregroundStyle(.white)
                 .clipShape(.capsule)
+                .alert(viewModel.authErrorMessage, isPresented: $viewModel.showingAuthError) {
+                    Button("OK", role: .cancel) {  }
+                }
         }
     }
 }

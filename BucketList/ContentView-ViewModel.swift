@@ -21,6 +21,8 @@ extension ContentView {
         var isUnlocked = false
         var mapStyle = MapStyle.standard
         var showingMapStyle = false
+        var authErrorMessage = ""
+        var showingAuthError = false
         
         func addLocation(at point: CLLocationCoordinate2D) {
             let newLocation = Location(id: UUID(), name: "New location", description: "", latitude: point.latitude, longitude: point.longitude)
@@ -67,12 +69,11 @@ extension ContentView {
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
                     if success {
                         self.isUnlocked = true
-                    } else {
-                        // Error
                     }
                 }
             } else {
-                // No bioms
+                self.authErrorMessage = "An error occurred while trying to authenticate."
+                self.showingAuthError = true
             }
         }
     }
